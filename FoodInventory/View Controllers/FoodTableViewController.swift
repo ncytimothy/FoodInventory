@@ -95,7 +95,7 @@ class FoodTableViewController: UITableViewController {
             detailVC.image = UIImage(named: "FI")
         }
         
-        detailVC.foodLeft = foodItems[indexPath.row].servings
+        detailVC.foodLeft = Int(Double(foodItems[indexPath.row].servings!))
         
         self.navigationController?.pushViewController(detailVC, animated: true)
         
