@@ -353,6 +353,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bct-wa-fOO" id="FOr-Rc-mJ4"/>
+                                </connections>
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5nG-In-ac0">
                                 <rect key="frame" x="141" y="437" width="94" height="29"/>
@@ -416,6 +419,7 @@
                         <outlet property="addFoodTextfield" destination="N2s-KB-a97" id="XfC-9j-UUe"/>
                         <outlet property="addMethodLabel" destination="Wi8-Sr-sag" id="5eN-8h-tSb"/>
                         <outlet property="newFoodImageView" destination="eAf-hx-s4Y" id="7wQ-sN-a0G"/>
+                        <outlet property="newFoodTextfield" destination="SDP-hg-kZb" id="ri4-Xq-MOR"/>
                         <outlet property="servingLabel" destination="Ny4-Cf-Xoa" id="Y5W-ps-UJs"/>
                         <outlet property="stepper" destination="5nG-In-ac0" id="3rX-qd-6tN"/>
                     </connections>

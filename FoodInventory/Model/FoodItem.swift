@@ -13,6 +13,7 @@ public struct FoodItem {
     var foodName: String? = "foodName"
     var servings: Double? = 0.0
     var foodImage: UIImage?
+    var price: Double = 5
   
     init(dictionary: [String:AnyObject]) {
         foodName = dictionary["name"] as? String
