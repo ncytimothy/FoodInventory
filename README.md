@@ -1,6 +1,6 @@
 # Project Title
 
-Food Inventory helps you track your kitchen incredients supplies and allows you to purchase them right from the app. Food Inventory is developed for iOS currently.
+Food Inventory helps you track your kitchen ingredients supplies and allows you to purchase them right from the app. Food Inventory is developed for iOS currently.
 
 ## Authors
 
