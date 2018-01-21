@@ -54,12 +54,24 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+         var foodNames = ["Rice", "Apples", "Oranges", "Apples", "Bread", "Beef"]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell") as! FoodTableViewCell
        
-        let foodName = foodItems[indexPath.row].foodName
+        if let foodName = foodItems[indexPath.row].foodName {
+            
+            if foodNames.contains(foodName) {
+                cell.foodLabel.text = foodName
+                cell.foodImage.image = UIImage(named: foodName)
+            } else {
+                cell.foodImage.image = UIImage(named: "FI")
+            }
+        }
+       
         
-        cell.foodLabel.text = foodName
-        cell.foodImage.image = UIImage(named: foodName!)
+        
+       
+       
         cell.alertTriangle.isHidden = true
 
         return cell
@@ -70,9 +82,21 @@ class FoodTableViewController: UITableViewController {
         
         detailVC.foodName = foodItems[indexPath.row].foodName
         print("\(foodItems[indexPath.row].foodName)")
-        detailVC.foodCost = prices[foodItems[indexPath.row].foodName!]
+        
+        if let price = prices[foodItems[indexPath.row].foodName!] {
+            detailVC.foodCost = price
+        } else {
+            detailVC.foodCost = 5
+        }
+        
+        if let foodImage = foodItems[indexPath.row].foodImage {
+            detailVC.image = foodImage
+        } else {
+            detailVC.image = UIImage(named: "FI")
+        }
+        
         detailVC.foodLeft = foodItems[indexPath.row].servings
-        detailVC.image = foodItems[indexPath.row].foodImage
+        
         self.navigationController?.pushViewController(detailVC, animated: true)
         
     }

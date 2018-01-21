@@ -7,11 +7,21 @@
 
 import UIKit
 
-class NewFoodViewController: UIViewController {
+class NewFoodViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func stepperPressed(_ sender: Any) {
         servingLabel.text = String(stepper.value)
     }
+    @IBOutlet var newFoodTextfield: UIView!
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.resignFirstResponder() {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     
     
     // MARK: Properties
